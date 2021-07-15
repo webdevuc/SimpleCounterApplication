@@ -1,0 +1,13 @@
+﻿@model WebApplication2.Models.dataModel
+@{
+    ViewBag.Title = "About";
+}
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <input type="hidden" name="countValue" value="@Model.countValue" />
+    <input type="hidden" name="originalValue" value="@Model.originalValue" />
+    <br /><br />
+    <input type="submit" value="Click me!" />
+    <label>@Model.countValue</label>
+
+}
