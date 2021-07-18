@@ -72,8 +72,8 @@ C:\Users\lenovo\source\repos\WebApplication2\WebApplication2\bin\System.Web.WebP
 C:\Users\lenovo\source\repos\WebApplication2\WebApplication2\bin\Newtonsoft.Json.xml
 C:\Users\lenovo\source\repos\WebApplication2\WebApplication2\bin\Antlr3.Runtime.pdb
 C:\Users\lenovo\source\repos\WebApplication2\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\lenovo\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojAssemblyReference.cache
 C:\Users\lenovo\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csproj.CoreCompileInputs.cache
 C:\Users\lenovo\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csproj.CopyComplete
 C:\Users\lenovo\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\lenovo\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\lenovo\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojAssemblyReference.cache

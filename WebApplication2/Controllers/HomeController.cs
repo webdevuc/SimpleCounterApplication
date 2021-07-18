@@ -17,10 +17,10 @@ namespace WebApplication2.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(dataModel d)
+        public JsonResult getCount(dataModel d)
         {
             dataModel data = new dataModel();
-            var count =d.originalValue + 1;
+            var count = d.originalValue + 1;
             var response = "";
             if (count % 3 == 0 && count % 5 == 0)
             {
@@ -38,7 +38,9 @@ namespace WebApplication2.Controllers
             {
                 response = count.ToString();
             }
-            return View(new dataModel() { countValue = response , originalValue = count });
+            data.countValue = response;
+            data.originalValue = count;
+           return  Json(data, JsonRequestBehavior.AllowGet);
         }
         public ActionResult About(dataModel d)
         {

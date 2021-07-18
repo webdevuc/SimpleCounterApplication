@@ -1,13 +1,47 @@
-﻿@model WebApplication2.Models.dataModel
-@{
+﻿@{
     ViewBag.Title = "About";
 }
-@using (Html.BeginForm("Index", "Home", FormMethod.Post))
-{
-    <input type="hidden" name="countValue" value="@Model.countValue" />
-    <input type="hidden" name="originalValue" value="@Model.originalValue" />
-    <br /><br />
-    <input type="submit" value="Click me!" />
-    <label>@Model.countValue</label>
 
-}
+<div>
+    <input type="hidden" name="countValue" id="countValue" />
+    <input type="hidden" name="originalValue" id="originalValue" />
+    <br />
+    <br />
+    <input type="button" value="Click me!" id="btnPost" onclick="Count()" />
+    <span id="lblShow"></span>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type = "text/javascript"src = "https://code.jquery.com/jquery-1.12.4.js" > </script>
+<script type="text/javascript">
+     
+    function Count() {
+                var displayData = new Object();
+                displayData.countValue = $('#countValue').val();
+                displayData.originalValue = $('#originalValue').val();
+                if (displayData != null) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Home/getCount",
+                        data: JSON.stringify(displayData),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            if (response != null) {
+                                console.log(response);
+                                $('#countValue').val(response.countValue);
+                                $('#originalValue').val(response.originalValue);
+                                $('#lblShow').text(response.countValue);
+                            } else {
+                                alert("Something went wrong");
+                            }
+                        },
+                        failure: function (response) {
+                            alert(response.responseText);
+                        },
+                        error: function (response) {
+                            alert(response.responseText);
+                        }
+                    });
+                }
+            }
+</script>
