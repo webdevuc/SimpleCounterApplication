@@ -11,9 +11,13 @@ namespace WebApplication2.Controllers
     {
 
         public ActionResult Index()
-        {
-            dataModel data = new dataModel();
-            return View(data);
+        {         
+            return View();             
+        }
+
+        public ActionResult Home()
+        {           
+           return PartialView("Home");
         }
 
         [HttpPost]
@@ -44,16 +48,12 @@ namespace WebApplication2.Controllers
         }
         public ActionResult About(dataModel d)
         {
-            ViewBag.Message = "Your application description page.";
-            return View();
+            return PartialView("About");
+            
         }
-
-
         public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-           
-            return View();
+        {         
+            return PartialView("Contact");
         }
       
     }
